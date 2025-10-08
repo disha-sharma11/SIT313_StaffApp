@@ -1,17 +1,21 @@
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button";
+import { useContext } from "react";
+import { UserInfo } from "../context/User_context";
 
 
 function AboutPage(){
     const auth =getAuth();
     const user = auth.currentUser;
     const navigate = useNavigate();
+    const { setcurrentuser } = useContext(UserInfo);
 
 
     function userlogout(){
         signOut(auth)
       .then(() => {
+        setcurrentuser(null);
         alert("Signed out successfully!");
         navigate("/");
       })
