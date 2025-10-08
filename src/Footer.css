@@ -1,0 +1,29 @@
+.footer {
+  background-color: #F9E3E2; 
+  padding: 15px 0.2px;
+  display: flex;         
+  justify-content: space-between; 
+  align-items: center;  
+  border-top: 2px solid #f7c9cc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none;   
+  color: #e14b62;     
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #b03045;  
+}
+
+.footer p {
+  color: #333;             
+  font-weight: 500;
+  margin: 0;        
+  padding-right: 5px;   
+}
